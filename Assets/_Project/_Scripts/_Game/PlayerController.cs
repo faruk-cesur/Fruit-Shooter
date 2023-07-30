@@ -1,0 +1,95 @@
+﻿using System;
+using Sirenix.OdinInspector;
+using UnityEngine;
+
+public class PlayerController : MonoBehaviour
+{
+    [SerializeField] private PlayerData _playerData;
+    private PlayerStates _playerState;
+
+    public enum PlayerStates
+    {
+        DriveAndCollectFruits,
+        DriveAndShootEnemies
+    }
+
+    #region Movement Variables
+
+    [SerializeField, BoxGroup("Movement Settings")] private float _sideMovementSensitivity = 2f;
+    [SerializeField, BoxGroup("Movement Settings"), Range(0, 1)] private float _defaultForwardMovementSpeed = 1f;
+    [SerializeField, BoxGroup("Movement Settings"), Range(0, 1)] private float _defaultSideMovementSpeed = 1f;
+    [SerializeField, BoxGroup("Movement Setup")] private Transform _sideMovementRoot;
+    [SerializeField, BoxGroup("Movement Setup")] private Transform _sideMovementLeftLimit, _sideMovementRightLimit;
+    private float LeftLimitX => _sideMovementLeftLimit.localPosition.x;
+    private float RightLimitX => _sideMovementRightLimit.localPosition.x;
+    private float _sideMovementTarget = 0f;
+
+    #endregion
+
+    #region Input Variables
+
+    [HideInInspector] public Vector2 InputDrag;
+    private Vector2 _previousMousePosition;
+
+    private Vector2 MousePositionCm
+    {
+        get
+        {
+            Vector2 pixels = Input.mousePosition;
+            var inches = pixels / Screen.dpi;
+            var centimeters = inches * 2.54f;
+
+            return centimeters;
+        }
+    }
+
+    #endregion
+
+
+    private void Update()
+    {
+        HandleInput();
+        HandleForwardMovement();
+        HandleSideMovement();
+    }
+
+    #region Movement
+
+    private void HandleForwardMovement()
+    {
+        transform.Translate(Vector3.forward * (Time.deltaTime * _defaultForwardMovementSpeed * _playerData.BonusForwardMovementSpeed), Space.Self);
+    }
+
+    private void HandleSideMovement()
+    {
+        _sideMovementTarget += InputDrag.x * _sideMovementSensitivity;
+        _sideMovementTarget = Mathf.Clamp(_sideMovementTarget, LeftLimitX, RightLimitX);
+
+        var localPos = _sideMovementRoot.localPosition;
+
+        localPos.x = Mathf.Lerp(localPos.x, _sideMovementTarget, Time.deltaTime * _defaultSideMovementSpeed * _playerData.BonusSideMovementSpeed);
+
+        _sideMovementRoot.localPosition = localPos;
+    }
+
+    private void HandleInput()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            _previousMousePosition = MousePositionCm;
+        }
+
+        if (Input.GetMouseButton(0))
+        {
+            var deltaMouse = MousePositionCm - _previousMousePosition;
+            InputDrag = deltaMouse;
+            _previousMousePosition = MousePositionCm;
+        }
+        else
+        {
+            InputDrag = Vector2.zero;
+        }
+    }
+
+    #endregion
+}
