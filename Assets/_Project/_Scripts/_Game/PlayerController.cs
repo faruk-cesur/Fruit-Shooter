@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private PlayerData _playerData;
-    private PlayerStates _playerState;
+    public PlayerStates PlayerState;
 
     public enum PlayerStates
     {
@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     private float LeftLimitX => _sideMovementLeftLimit.localPosition.x;
     private float RightLimitX => _sideMovementRightLimit.localPosition.x;
     private float _sideMovementTarget = 0f;
+    public float ForwardMoveSpeed => _defaultForwardMovementSpeed * _playerData.BonusForwardMovementSpeed;
 
     #endregion
 
@@ -82,7 +83,8 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             var deltaMouse = MousePositionCm - _previousMousePosition;
-            InputDrag = deltaMouse;
+            //InputDrag = deltaMouse; todo input daha smooth olsun diye lerp koydum eger oynanis zorlanirsa eski haline getir.
+            InputDrag = Vector2.Lerp(InputDrag, deltaMouse, Time.deltaTime * 30);
             _previousMousePosition = MousePositionCm;
         }
         else
