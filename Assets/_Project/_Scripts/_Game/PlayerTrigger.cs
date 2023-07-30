@@ -11,5 +11,21 @@ public class PlayerTrigger : MonoBehaviour
         {
             Destroy(other.gameObject);
         }
+
+        if (other.TryGetComponent<FruitGate>(out FruitGate fruitGate))
+        {
+            if (IsGateTriggered(fruitGate))
+                return;
+
+            fruitGate.IsGateTriggered = true;
+            fruitGate.OtherFruitGate.IsGateTriggered = true;
+
+            Destroy(other.gameObject);
+        }
+    }
+
+    private bool IsGateTriggered(FruitGate fruitGate)
+    {
+        return fruitGate.IsGateTriggered || fruitGate.OtherFruitGate.IsGateTriggered;
     }
 }
