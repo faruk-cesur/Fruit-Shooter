@@ -19,6 +19,8 @@ public class FruitGate : MonoBehaviour
     [BoxGroup("Gate Settings"), Range(1, 100), ShowIf(nameof(IsTypeOfLuckGate))] public int LuckGateMaximumFruitAmount = 100;
     [BoxGroup("Gate Setup")] public FruitGate OtherFruitGate;
     [BoxGroup("Gate Setup"), SerializeField] private TextMeshProUGUI _gateFruitAmountText;
+    [BoxGroup("Gate Setup"), SerializeField] private ParticleSystem _fruitGateParticle;
+
     [HideInInspector] public bool IsGateTriggered;
 
     private void OnValidate()
@@ -41,11 +43,6 @@ public class FruitGate : MonoBehaviour
         }
     }
 
-    private bool IsTypeOfLuckGate()
-    {
-        return GateType == GateTypes.Luck;
-    }
-
     public void TriggerFruitGate(float amount)
     {
         switch (GateType)
@@ -64,13 +61,27 @@ public class FruitGate : MonoBehaviour
         }
     }
 
+    private void PlayFruitGateParticle()
+    {
+        _fruitGateParticle.transform.SetParent(null);
+        _fruitGateParticle.Play();
+        Destroy(_fruitGateParticle.gameObject, 5f);
+    }
+
+    private bool IsTypeOfLuckGate()
+    {
+        return GateType == GateTypes.Luck;
+    }
+
     private void AddGate(float amount)
     {
+        PlayFruitGateParticle();
         Inventory.OnAddFruit?.Invoke(amount);
     }
 
     private void SubstractGate(float amount)
     {
+        PlayFruitGateParticle(); // fruit kaybedince particle cikmamasi icin bunu sil
         Inventory.OnRemoveFruit?.Invoke(amount);
     }
 
@@ -81,10 +92,12 @@ public class FruitGate : MonoBehaviour
 
         if (randomLuck == 0)
         {
+            PlayFruitGateParticle();
             Inventory.OnAddFruit?.Invoke((int)randomAmount);
         }
         else
         {
+            PlayFruitGateParticle(); // fruit kaybedince particle cikmamasi icin bunu sil
             Inventory.OnRemoveFruit?.Invoke((int)randomAmount);
         }
     }

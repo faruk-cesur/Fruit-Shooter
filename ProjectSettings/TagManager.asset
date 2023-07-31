@@ -4,8 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - MoneyLittle
-  - MoneyBig
   - FruitGate
   layers:
   - Default

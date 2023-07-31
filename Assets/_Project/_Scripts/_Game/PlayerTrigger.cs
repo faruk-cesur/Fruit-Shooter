@@ -7,8 +7,9 @@ public class PlayerTrigger : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("MoneyBig"))
+        if (other.TryGetComponent<Collectable>(out Collectable collectable))
         {
+            collectable.Collect();
             Destroy(other.gameObject);
         }
 
@@ -19,7 +20,6 @@ public class PlayerTrigger : MonoBehaviour
 
             TriggerGates(fruitGate);
             fruitGate.TriggerFruitGate(fruitGate.GateFruitAmount);
-            //todo Gate Particle
             Destroy(other.gameObject);
         }
     }
