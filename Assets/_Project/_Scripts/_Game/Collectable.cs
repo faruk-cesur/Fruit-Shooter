@@ -22,6 +22,7 @@ public class Collectable : MonoBehaviour
                 break;
             case CollectableTypes.Fruit:
                 Inventory.OnAddFruit?.Invoke(_collectableAmount);
+                Inventory.OnChangeFruitAmount?.Invoke();
                 break;
             default:
                 throw new ArgumentOutOfRangeException();

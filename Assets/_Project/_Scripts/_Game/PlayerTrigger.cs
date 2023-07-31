@@ -20,6 +20,7 @@ public class PlayerTrigger : MonoBehaviour
 
             TriggerGates(fruitGate);
             fruitGate.TriggerFruitGate(fruitGate.GateFruitAmount);
+            Inventory.OnChangeFruitAmount?.Invoke();
             Destroy(other.gameObject);
         }
     }

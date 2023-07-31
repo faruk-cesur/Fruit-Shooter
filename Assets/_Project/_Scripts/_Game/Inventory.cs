@@ -1,34 +1,55 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class Inventory : MonoBehaviour
 {
-    public float FruitAmount;
-
     public static UnityAction<float> OnAddFruit;
     public static UnityAction<float> OnRemoveFruit;
+    public static UnityAction OnChangeFruitAmount;
+
+    [SerializeField, ReadOnly] private float _fruitAmount;
+    [SerializeField] private float _fruitCaseRatio = 10f;
+    [SerializeField] private List<GameObject> _fruitCaseList;
 
     private void Start()
     {
         OnAddFruit += AddFruit;
         OnRemoveFruit += RemoveFruit;
+        OnChangeFruitAmount += ChangeFruitCaseAmount;
+        ChangeFruitCaseAmount();
     }
 
     public void AddFruit(float amount)
     {
-        FruitAmount += amount;
+        _fruitAmount += amount;
     }
 
     public void RemoveFruit(float amount)
     {
-        FruitAmount -= amount;
+        _fruitAmount -= amount;
 
-        if (FruitAmount < 0)
+        if (_fruitAmount < 0)
         {
-            FruitAmount = 0;
+            _fruitAmount = 0;
+        }
+    }
+
+    private void ChangeFruitCaseAmount()
+    {
+        int activeFruitCount = Mathf.RoundToInt(_fruitAmount / _fruitCaseRatio);
+
+        foreach (GameObject fruitCase in _fruitCaseList)
+        {
+            fruitCase.SetActive(false);
+        }
+
+        for (int i = 0; i < activeFruitCount && i < _fruitCaseList.Count; i++)
+        {
+            _fruitCaseList[i].SetActive(true);
         }
     }
 }
