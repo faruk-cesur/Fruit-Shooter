@@ -49,9 +49,24 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        HandleInput();
-        HandleForwardMovement();
-        HandleSideMovement();
+        switch (GameManager.Instance.CurrentGameState)
+        {
+            case GameState.None:
+                break;
+            case GameState.Start:
+                break;
+            case GameState.Gameplay:
+                HandleInput();
+                HandleForwardMovement();
+                HandleSideMovement();
+                break;
+            case GameState.Win:
+                break;
+            case GameState.Lose:
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
     }
 
     #region Movement

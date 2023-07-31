@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
@@ -16,10 +14,11 @@ public class FruitGate : MonoBehaviour
     }
 
     [BoxGroup("Gate Settings")] public GateTypes GateType;
-    [BoxGroup("Gate Settings")] public int GateNumber;
-    [BoxGroup("Gate Settings"),Range(1,10)] public int LuckGateDifficulty;
+    [BoxGroup("Gate Settings"), HideIf(nameof(IsTypeOfLuckGate))] public int GateFruitAmount;
+    [BoxGroup("Gate Settings"), Range(2, 10), ShowIf(nameof(IsTypeOfLuckGate))] public int LuckGateDifficulty = 2;
+    [BoxGroup("Gate Settings"), Range(1, 100), ShowIf(nameof(IsTypeOfLuckGate))] public int LuckGateMaximumFruitAmount = 100;
     [BoxGroup("Gate Setup")] public FruitGate OtherFruitGate;
-    [BoxGroup("Gate Setup"), SerializeField] private TextMeshProUGUI _gateNumberText;
+    [BoxGroup("Gate Setup"), SerializeField] private TextMeshProUGUI _gateFruitAmountText;
     [HideInInspector] public bool IsGateTriggered;
 
     private void OnValidate()
@@ -27,86 +26,66 @@ public class FruitGate : MonoBehaviour
         switch (GateType)
         {
             case GateTypes.Add:
-                _gateNumberText.text = "+";
-                _gateNumberText.text += GateNumber;
+                _gateFruitAmountText.text = "+";
+                _gateFruitAmountText.text += GateFruitAmount;
                 break;
             case GateTypes.Substract:
-                _gateNumberText.text = "-";
-                _gateNumberText.text += GateNumber;
+                _gateFruitAmountText.text = "-";
+                _gateFruitAmountText.text += GateFruitAmount;
                 break;
             case GateTypes.Luck:
-                _gateNumberText.text = "?";
+                _gateFruitAmountText.text = "?";
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
         }
     }
 
-    public float AddGate()
+    private bool IsTypeOfLuckGate()
     {
-        return GateNumber;
+        return GateType == GateTypes.Luck;
     }
-    
-    public float SubstractGate()
+
+    public void TriggerFruitGate(float amount)
     {
-        return -GateNumber;
+        switch (GateType)
+        {
+            case GateTypes.Add:
+                AddGate(amount);
+                break;
+            case GateTypes.Substract:
+                SubstractGate(amount);
+                break;
+            case GateTypes.Luck:
+                LuckGate();
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
     }
-    
-    public float LuckGate()
+
+    private void AddGate(float amount)
     {
-        var randomNumber = Random.Range(1, 101);
-        var randomLuck = Random.Range(0, LuckGateDifficulty);
+        Inventory.OnAddFruit?.Invoke(amount);
+    }
+
+    private void SubstractGate(float amount)
+    {
+        Inventory.OnRemoveFruit?.Invoke(amount);
+    }
+
+    private void LuckGate()
+    {
+        var randomAmount = Random.Range(1f, LuckGateMaximumFruitAmount);
+        var randomLuck = Random.Range(0, LuckGateDifficulty); // positive or negative number
 
         if (randomLuck == 0)
         {
-            return randomNumber;
+            Inventory.OnAddFruit?.Invoke((int)randomAmount);
         }
         else
         {
-            return -randomNumber;
+            Inventory.OnRemoveFruit?.Invoke((int)randomAmount);
         }
     }
-
-    // public void TriggerFruitGate(ref float itemAmount, float amount)
-    // {
-    //     switch (GateType)
-    //     {
-    //         case GateTypes.Add:
-    //             AddGate(ref itemAmount,amount);
-    //             break;
-    //         case GateTypes.Substract:
-    //             SubstractGate(ref itemAmount,amount);
-    //             break;
-    //         case GateTypes.Luck:
-    //             LuckGate(ref itemAmount);
-    //             break;
-    //         default:
-    //             throw new ArgumentOutOfRangeException();
-    //     }
-    // }
-    //
-    // private void AddGate(ref float itemAmount, float amountToAdd)
-    // {
-    //     itemAmount += amountToAdd;
-    // }
-    //
-    // public void SubstractGate(ref float itemAmount, float amountToRemove)
-    // {
-    //     itemAmount -= amountToRemove;
-    // }
-    //
-    // public void LuckGate(ref float itemAmount)
-    // {
-    //     var randomNumber = Random.Range(1, 101);
-    //     var randomLuck = Random.Range(0, LuckGateDifficulty);
-    //
-    //     if (randomLuck == 0)
-    //     {
-    //         itemAmount += randomNumber;
-    //     }
-    //     else
-    //     {
-    //         itemAmount -= randomNumber;
-    //     }
-    // }
 }
