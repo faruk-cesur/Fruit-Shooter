@@ -1,16 +1,14 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerTrigger : MonoBehaviour
 {
+    [SerializeField] private Inventory _inventory;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent<Collectable>(out Collectable collectable))
         {
-            collectable.Collect();
-            Destroy(other.gameObject);
+            collectable.Collect(_inventory.GetActiveLastFruitCase);
         }
 
         if (other.TryGetComponent<FruitGate>(out FruitGate fruitGate))

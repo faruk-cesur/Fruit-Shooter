@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b8a5b2262bd4abcbfb21d6d0c5513bb, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  <BonusForwardMovementSpeed>k__BackingField: 10
+  <BonusForwardMovementSpeed>k__BackingField: 3
   <BonusSideMovementSpeed>k__BackingField: 10
