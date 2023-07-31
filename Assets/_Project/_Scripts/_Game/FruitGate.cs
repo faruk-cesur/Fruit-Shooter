@@ -43,7 +43,7 @@ public class FruitGate : MonoBehaviour
         }
     }
 
-    public void TriggerFruitGate(float amount)
+    public void TriggerFruitGate(int amount)
     {
         switch (GateType)
         {
@@ -73,13 +73,13 @@ public class FruitGate : MonoBehaviour
         return GateType == GateTypes.Luck;
     }
 
-    private void AddGate(float amount)
+    private void AddGate(int amount)
     {
         PlayFruitGateParticle();
         Inventory.OnAddFruit?.Invoke(amount);
     }
 
-    private void SubstractGate(float amount)
+    private void SubstractGate(int amount)
     {
         PlayFruitGateParticle(); // fruit kaybedince particle cikmamasi icin bunu sil
         Inventory.OnRemoveFruit?.Invoke(amount);

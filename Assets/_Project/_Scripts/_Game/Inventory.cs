@@ -2,18 +2,20 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class Inventory : MonoBehaviour
 {
-    public static UnityAction<float> OnAddFruit;
-    public static UnityAction<float> OnRemoveFruit;
+    public static UnityAction<int> OnAddFruit;
+    public static UnityAction<int> OnRemoveFruit;
     public static UnityAction OnChangeFruitAmount;
 
-    [SerializeField, ReadOnly] private float _fruitAmount;
-    [SerializeField] private float _fruitCaseRatio = 10f;
-    [SerializeField] private List<GameObject> _fruitCaseList;
+    [SerializeField, ReadOnly, BoxGroup("Inventory Debug")] private int _fruitAmount;
+    [SerializeField, BoxGroup("Inventory Settings")] private float _fruitCaseRatio = 10f;
+    [SerializeField, BoxGroup("Inventory Setup")] private List<GameObject> _fruitCaseList;
+    [SerializeField, BoxGroup("Inventory Setup")] private TextMeshProUGUI _fruitAmountText;
 
     private void Start()
     {
@@ -23,12 +25,12 @@ public class Inventory : MonoBehaviour
         ChangeFruitCaseAmount();
     }
 
-    public void AddFruit(float amount)
+    public void AddFruit(int amount)
     {
         _fruitAmount += amount;
     }
 
-    public void RemoveFruit(float amount)
+    public void RemoveFruit(int amount)
     {
         _fruitAmount -= amount;
 
@@ -51,5 +53,12 @@ public class Inventory : MonoBehaviour
         {
             _fruitCaseList[i].SetActive(true);
         }
+        
+        SetFruitAmountText();
+    }
+
+    private void SetFruitAmountText()
+    {
+        _fruitAmountText.text = _fruitAmount.ToString();
     }
 }
