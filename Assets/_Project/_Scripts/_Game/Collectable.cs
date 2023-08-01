@@ -52,7 +52,7 @@ public class Collectable : MonoBehaviour
     private void CollectAnimation(Transform targetTransform)
     {
         transform.SetParent(targetTransform);
-        transform.DOLocalJump(Vector3.zero, 10f, 1, 0.5f).OnComplete(() =>
+        transform.DOLocalJump(Vector3.zero, 7f, 1, 0.5f).OnComplete(() =>
         {
             Inventory.OnAddFruit?.Invoke(_collectableAmount);
             Inventory.OnChangeFruitAmount?.Invoke();
