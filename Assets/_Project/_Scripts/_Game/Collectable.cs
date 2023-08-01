@@ -28,8 +28,6 @@ public class Collectable : MonoBehaviour
                 CurrencyManager.Instance.EarnMoney(_collectableAmount);
                 break;
             case CollectableTypes.Fruit:
-                Inventory.OnAddFruit?.Invoke(_collectableAmount);
-                Inventory.OnChangeFruitAmount?.Invoke();
                 CollectAnimation(targetTransformForAnimation);
                 break;
             default:
@@ -54,7 +52,11 @@ public class Collectable : MonoBehaviour
     private void CollectAnimation(Transform targetTransform)
     {
         transform.SetParent(targetTransform);
-        transform.DOLocalRotate(Vector3.zero, 0.5f);
-        transform.DOLocalJump(Vector3.zero, 5f, 1, 0.5f).OnComplete(() => Destroy(gameObject));
+        transform.DOLocalJump(Vector3.zero, 10f, 1, 0.5f).OnComplete(() =>
+        {
+            Inventory.OnAddFruit?.Invoke(_collectableAmount);
+            Inventory.OnChangeFruitAmount?.Invoke();
+            Destroy(gameObject);
+        });
     }
 }
