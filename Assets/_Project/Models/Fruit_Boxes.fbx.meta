@@ -3,7 +3,17 @@ guid: 00528b13b763d88469760e0cef9d2d7e
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fruit boxes
+    second: {fileID: 2100000, guid: 4afbc017410c2c94c9478fc22b040b26, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Red Apple
+    second: {fileID: 2100000, guid: f3ad7e745b16cb5449c5900398074ac5, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
