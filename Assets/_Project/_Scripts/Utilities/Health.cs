@@ -7,12 +7,11 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    public float StartingHealth { get; set; }
+    [field: SerializeField] public float StartingHealth { get; set; }
     public float SliderSpeed = 0.5f;
     [field: SerializeField] private Slider HealthSlider { get; set; }
     [field: SerializeField] private Gradient GradientHealthColor { get; set; }
     [field: SerializeField] private Image Fill { get; set; }
-    [field: SerializeField] private Image HeartImage { get; set; }
     public UnityAction OnDeath;
 
     public bool IsDead { get; set; }

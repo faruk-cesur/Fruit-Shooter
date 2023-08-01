@@ -31,6 +31,11 @@ public class FindClosestTarget : MonoBehaviour
                 distanceToClosestTarget = distanceToTarget;
                 closestTarget = hitColliders[i].gameObject;
             }
+            else
+            {
+                ClosestTarget = null;
+                SqrDistanceToTarget = 0;
+            }
         }
 
         ClosestTarget = closestTarget;

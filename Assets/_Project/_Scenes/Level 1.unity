@@ -175,6 +175,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectable Fruit (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
       value: 10
@@ -240,6 +244,10 @@ PrefabInstance:
     - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: m_Name
       value: Collectable Fruit (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
@@ -307,6 +315,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectable Fruit (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
       value: 10
@@ -372,6 +384,10 @@ PrefabInstance:
     - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: m_Name
       value: Collectable Fruit (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
@@ -439,6 +455,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectable Fruit (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
       value: 10
@@ -505,6 +525,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectable Fruit (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
       value: 10
@@ -549,6 +573,9 @@ Transform:
   m_Children:
   - {fileID: 1800678597}
   - {fileID: 1764765951}
+  - {fileID: 665964630}
+  - {fileID: 533906455}
+  - {fileID: 211375675}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -604,6 +631,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectable Fruit (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
       value: 10
@@ -617,6 +648,84 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1065238780042539948, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
   m_PrefabInstance: {fileID: 167839031}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &211375674
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 160470155}
+    m_Modifications:
+    - target: {fileID: 874531179221659941, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: _targetToChase
+      value: 
+      objectReference: {fileID: 1800678597}
+    - target: {fileID: 1044619788482183356, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_Name
+      value: Enemy Stickman (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204038844577987122, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204038844577987122, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+--- !u!4 &211375675 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+  m_PrefabInstance: {fileID: 211375674}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &268327129
 PrefabInstance:
@@ -669,6 +778,10 @@ PrefabInstance:
     - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: m_Name
       value: Collectable Fruit (44)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
@@ -810,6 +923,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectable Fruit (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
       value: 10
@@ -909,6 +1026,10 @@ PrefabInstance:
     - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: m_Name
       value: Collectable Fruit (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
@@ -1015,7 +1136,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 324435843}
   m_LocalRotation: {x: 0.30070576, y: -0, z: -0, w: 0.953717}
-  m_LocalPosition: {x: 0, y: 12, z: -2}
+  m_LocalPosition: {x: 0, y: 12, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1108,6 +1229,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectable Fruit (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
       value: 10
@@ -1173,6 +1298,10 @@ PrefabInstance:
     - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: m_Name
       value: Collectable Fruit (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
@@ -1240,6 +1369,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectable Fruit (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
       value: 10
@@ -1305,6 +1438,10 @@ PrefabInstance:
     - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: m_Name
       value: Collectable Fruit (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
@@ -1372,6 +1509,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectable Fruit (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
       value: 10
@@ -1437,6 +1578,10 @@ PrefabInstance:
     - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: m_Name
       value: Collectable Fruit (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
@@ -1504,6 +1649,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectable Fruit (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
       value: 10
@@ -1570,6 +1719,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectable Fruit (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
       value: 10
@@ -1583,6 +1736,88 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1065238780042539948, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
   m_PrefabInstance: {fileID: 502842439}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &533906454
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 160470155}
+    m_Modifications:
+    - target: {fileID: 874531179221659941, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: _targetToChase
+      value: 
+      objectReference: {fileID: 1800678597}
+    - target: {fileID: 1044619788482183356, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_Name
+      value: Enemy Stickman (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204038844577987122, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204038844577987122, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6293233702042327584, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: <GradientHealthColor>k__BackingField.m_ColorSpace
+      value: -1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+--- !u!4 &533906455 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+  m_PrefabInstance: {fileID: 533906454}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &537253623
 PrefabInstance:
@@ -1635,6 +1870,10 @@ PrefabInstance:
     - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: m_Name
       value: Collectable Fruit (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
@@ -1702,6 +1941,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectable Fruit (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
       value: 10
@@ -1747,10 +1990,10 @@ Transform:
   - {fileID: 272331977}
   - {fileID: 1544646118}
   - {fileID: 1879022352}
-  - {fileID: 323291137}
   - {fileID: 714636840331504279}
   - {fileID: 1009603362}
   - {fileID: 904658106}
+  - {fileID: 323291137}
   - {fileID: 2138501730}
   - {fileID: 23817829}
   - {fileID: 64106264}
@@ -1801,6 +2044,84 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &665964629
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 160470155}
+    m_Modifications:
+    - target: {fileID: 874531179221659941, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: _targetToChase
+      value: 
+      objectReference: {fileID: 1800678597}
+    - target: {fileID: 1044619788482183356, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_Name
+      value: Enemy Stickman (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204038844577987122, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204038844577987122, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+--- !u!4 &665964630 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+  m_PrefabInstance: {fileID: 665964629}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &748977265
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1852,6 +2173,10 @@ PrefabInstance:
     - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: m_Name
       value: Collectable Fruit (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
@@ -1919,6 +2244,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectable Fruit (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
       value: 10
@@ -1941,6 +2270,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 588883393}
     m_Modifications:
+    - target: {fileID: 3157768242641190346, guid: ea8d220c449b8294284a2a4a8e3eed2a, type: 3}
+      propertyPath: m_text
+      value: +100
+      objectReference: {fileID: 0}
     - target: {fileID: 3361529217371616793, guid: ea8d220c449b8294284a2a4a8e3eed2a, type: 3}
       propertyPath: InitialModule.startSizeY.minMaxState
       value: 3
@@ -2095,6 +2428,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectable Fruit (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
       value: 10
@@ -2161,6 +2498,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectable Fruit (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
       value: 10
@@ -2206,6 +2547,10 @@ PrefabInstance:
     - target: {fileID: 5241202246712770445, guid: ea8d220c449b8294284a2a4a8e3eed2a, type: 3}
       propertyPath: GateFruitAmount
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5442886845914217393, guid: ea8d220c449b8294284a2a4a8e3eed2a, type: 3}
+      propertyPath: m_text
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 6414916112124077395, guid: ea8d220c449b8294284a2a4a8e3eed2a, type: 3}
       propertyPath: m_RootOrder
@@ -2328,6 +2673,10 @@ PrefabInstance:
     - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: m_Name
       value: Collectable Fruit (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
@@ -2489,6 +2838,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectable Fruit (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
       value: 10
@@ -2554,6 +2907,10 @@ PrefabInstance:
     - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: m_Name
       value: Collectable Fruit (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
@@ -2688,6 +3045,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectable Fruit (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
       value: 10
@@ -2753,6 +3114,10 @@ PrefabInstance:
     - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: m_Name
       value: Collectable Fruit (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
@@ -2820,6 +3185,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectable Fruit (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
       value: 10
@@ -2885,6 +3254,10 @@ PrefabInstance:
     - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: m_Name
       value: Collectable Fruit (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
@@ -2952,6 +3325,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectable Fruit (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
       value: 10
@@ -3017,6 +3394,10 @@ PrefabInstance:
     - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: m_Name
       value: Collectable Fruit (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
@@ -3084,6 +3465,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectable Fruit (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
       value: 10
@@ -3149,6 +3534,10 @@ PrefabInstance:
     - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: m_Name
       value: Collectable Fruit (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
@@ -3286,6 +3675,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectable Fruit (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
       value: 10
@@ -3351,6 +3744,10 @@ PrefabInstance:
     - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: m_Name
       value: Collectable Fruit (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
@@ -3418,6 +3815,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectable Fruit (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
       value: 10
@@ -3483,6 +3884,10 @@ PrefabInstance:
     - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: m_Name
       value: Collectable Fruit (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
@@ -3630,6 +4035,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectable Fruit (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
       value: 10
@@ -3695,6 +4104,10 @@ PrefabInstance:
     - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: m_Name
       value: Collectable Fruit (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
@@ -3774,7 +4187,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1912814255}
   m_LocalRotation: {x: 0.30070576, y: -0, z: -0, w: 0.953717}
-  m_LocalPosition: {x: 0, y: 12, z: -2}
+  m_LocalPosition: {x: 0, y: 12, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3833,6 +4246,10 @@ PrefabInstance:
     - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: m_Name
       value: Collectable Fruit (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
@@ -3900,6 +4317,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectable Fruit (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
       value: 10
@@ -3965,6 +4386,10 @@ PrefabInstance:
     - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: m_Name
       value: Collectable Fruit (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
@@ -4032,6 +4457,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectable Fruit (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
       value: 10
@@ -4098,6 +4527,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectable Fruit (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
       value: 10
@@ -4163,6 +4596,10 @@ PrefabInstance:
     - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: m_Name
       value: Collectable Fruit (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3187017369527016789, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
@@ -4280,9 +4717,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 160470155}
     m_Modifications:
+    - target: {fileID: 874531179221659941, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: _targetToChase
+      value: 
+      objectReference: {fileID: 1800678597}
     - target: {fileID: 1044619788482183356, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
       propertyPath: m_Name
       value: Enemy Stickman
+      objectReference: {fileID: 0}
+    - target: {fileID: 3530110110572837928, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[0]
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
       propertyPath: m_RootOrder
@@ -4298,7 +4743,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4327,6 +4772,26 @@ PrefabInstance:
     - target: {fileID: 6094641530352992221, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204038844577987122, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204038844577987122, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204038844577987122, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6293233702042327584, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: <GradientHealthColor>k__BackingField.m_ColorSpace
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175312515047946561, guid: d05d1a446bbb30e4d836af38ca2f167a, type: 3}
+      propertyPath: m_Value
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4387,7 +4852,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7794768626742492637, guid: 657e096847b724742ac79ee62f7e277c, type: 3}
       propertyPath: _collectableAmount
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4420,7 +4885,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4921573676742247035, guid: caaaf571ef255e24f810db4fad4acb67, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4921573676742247035, guid: caaaf571ef255e24f810db4fad4acb67, type: 3}
       propertyPath: m_LocalRotation.w

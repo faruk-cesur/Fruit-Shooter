@@ -21,6 +21,17 @@ public class PlayerTrigger : MonoBehaviour
             Inventory.OnChangeFruitAmount?.Invoke();
             Destroy(other.gameObject);
         }
+
+        if (other.TryGetComponent<EnemyBase>(out EnemyBase enemyBase))
+        {
+            if (enemyBase.IsEnemyTriggered)
+                return;
+
+            enemyBase.IsEnemyTriggered = true;
+            Inventory.OnRemoveFruit?.Invoke(enemyBase.EnemyDamageAmount);
+            Inventory.OnChangeFruitAmount?.Invoke();
+            enemyBase.ExplodeOnTrigger();
+        }
     }
 
     private bool IsGateTriggered(FruitGate fruitGate)
