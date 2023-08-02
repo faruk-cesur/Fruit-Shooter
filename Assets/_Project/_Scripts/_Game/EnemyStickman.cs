@@ -8,6 +8,7 @@ public class EnemyStickman : EnemyBase
     [SerializeField] private SkinnedMeshRenderer _skinnedMeshRenderer;
     [SerializeField] private FindClosestTarget _findClosestTarget;
     [SerializeField] private Transform _targetToChase;
+    [SerializeField] private Transform _enemyModel;
     [SerializeField] private float _secondsBetweenSideMove;
     private float _randomSideMovement;
     private bool _isEnemyCloseToTheTarget;
@@ -22,28 +23,15 @@ public class EnemyStickman : EnemyBase
 
     private void Update()
     {
-        switch (GameManager.Instance.CurrentGameState)
-        {
-            case GameState.None:
-                break;
-            case GameState.Start:
-                break;
-            case GameState.Gameplay:
-                ChaseTheTarget();
-                break;
-            case GameState.Win:
-                break;
-            case GameState.Lose:
-                break;
-            default:
-                throw new ArgumentOutOfRangeException();
-        }
+        ChaseTheTarget();
     }
 
     private void ChaseTheTarget()
     {
-        Vector3 targetPosition = new Vector3(_randomSideMovement, 0, _targetToChase.position.z);
-        transform.position = Vector3.MoveTowards(transform.position, targetPosition, EnemySpeed * Time.deltaTime);
+        Vector3 targetForwardPosition = Vector3.zero;
+        Vector3 targetSidePosition = new Vector3(_targetToChase.localPosition.x + _randomSideMovement, 0, 0);
+        transform.localPosition = Vector3.MoveTowards(transform.localPosition, targetForwardPosition, EnemySpeed * Time.deltaTime);
+        _enemyModel.transform.localPosition = Vector3.MoveTowards(_enemyModel.transform.localPosition, targetSidePosition, 10 * Time.deltaTime);
 
         if (_findClosestTarget.IsClosestTargetNull())
         {
@@ -67,7 +55,7 @@ public class EnemyStickman : EnemyBase
         {
             if (!_isEnemyCloseToTheTarget)
             {
-                _randomSideMovement = Random.Range(-5.5f, 5.5f);
+                _randomSideMovement = Random.Range(-3f, 3f);
                 yield return new WaitForSeconds(_secondsBetweenSideMove);
             }
 
@@ -81,7 +69,7 @@ public class EnemyStickman : EnemyBase
         {
             EnemyHealth.Heal(1);
             SetBlendShapeWeight();
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.1f);
         }
     }
 

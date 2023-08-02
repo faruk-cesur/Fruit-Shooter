@@ -1,4 +1,5 @@
 ﻿using System;
+using DG.Tweening;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -56,9 +57,21 @@ public class PlayerController : MonoBehaviour
             case GameState.Start:
                 break;
             case GameState.Gameplay:
-                HandleInput();
-                HandleForwardMovement();
-                HandleSideMovement();
+                switch (PlayerState)
+                {
+                    case PlayerStates.DriveAndCollectFruits:
+                        HandleInput();
+                        HandleForwardMovement();
+                        HandleSideMovement();
+                        break;
+                    case PlayerStates.DriveAndShootEnemies:
+                        HandleForwardMovement();
+                        HandleSideMovement();
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException();
+                }
+
                 break;
             case GameState.Win:
                 break;
@@ -106,6 +119,12 @@ public class PlayerController : MonoBehaviour
         {
             InputDrag = Vector2.zero;
         }
+    }
+
+    public void SetSideMoveLimits(float leftSideLimit, float rightSideLimit, float duration)
+    {
+        _sideMovementLeftLimit.DOLocalMoveX(leftSideLimit, duration);
+        _sideMovementRightLimit.DOLocalMoveX(rightSideLimit, duration);
     }
 
     #endregion

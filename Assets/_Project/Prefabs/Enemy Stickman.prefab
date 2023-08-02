@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 6293233702042327584}
   - component: {fileID: 874531179221659941}
   - component: {fileID: 3314354762532426910}
-  - component: {fileID: 3101195357287929684}
-  - component: {fileID: 5911064226964802898}
+  - component: {fileID: 208438685397691903}
   m_Layer: 0
   m_Name: Enemy Stickman
   m_TagString: Untagged
@@ -30,12 +29,10 @@ Transform:
   m_GameObject: {fileID: 1044619788482183356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 647331069055314860}
-  - {fileID: 8963035334871711450}
-  - {fileID: 1072920062042404088}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -102,11 +99,12 @@ MonoBehaviour:
   _enemyParticle: {fileID: 6614357795964549000}
   _enemyAnimator: {fileID: 8484902806908783469}
   EnemyHealth: {fileID: 6293233702042327584}
-  EnemySpeed: 10
+  EnemySpeed: 0
   EnemyDamageAmount: 30
   _skinnedMeshRenderer: {fileID: 3530110110572837928}
   _findClosestTarget: {fileID: 3314354762532426910}
   _targetToChase: {fileID: 0}
+  _enemyModel: {fileID: 647331069055314860}
   _secondsBetweenSideMove: 2
 --- !u!114 &3314354762532426910
 MonoBehaviour:
@@ -126,7 +124,7 @@ MonoBehaviour:
     m_Bits: 64
   ClosestTarget: {fileID: 0}
   SqrDistanceToTarget: 0
---- !u!54 &3101195357287929684
+--- !u!54 &208438685397691903
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152,30 +150,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 116
-  m_CollisionDetection: 0
---- !u!136 &5911064226964802898
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1044619788482183356}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.4
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_CollisionDetection: 1
 --- !u!1 &5179648894606479437
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,8 +160,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 647331069055314860}
+  - component: {fileID: 2133051713831556898}
   m_Layer: 0
-  m_Name: Model
+  m_Name: Enemy Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -205,9 +181,34 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2531096594963403031}
+  - {fileID: 8963035334871711450}
+  - {fileID: 1072920062042404088}
   m_Father: {fileID: 6094641530352992221}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &2133051713831556898
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5179648894606479437}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.4
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &2642200710728644348
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -298,7 +299,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 6094641530352992221}
+    m_TransformParent: {fileID: 647331069055314860}
     m_Modifications:
     - target: {fileID: 614016861885436251, guid: b50695f092412104c8009576bd3cb182, type: 3}
       propertyPath: playOnAwake
@@ -5214,7 +5215,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 6094641530352992221}
+    m_TransformParent: {fileID: 647331069055314860}
     m_Modifications:
     - target: {fileID: 801878617391018887, guid: af5a322e995ef8f40a10a3182e97c20d, type: 3}
       propertyPath: m_AnchorMax.x
@@ -5254,7 +5255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2403493978043610991, guid: af5a322e995ef8f40a10a3182e97c20d, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2403493978043610991, guid: af5a322e995ef8f40a10a3182e97c20d, type: 3}
       propertyPath: m_AnchorMax.x
@@ -5298,15 +5299,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2403493978043610991, guid: af5a322e995ef8f40a10a3182e97c20d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2403493978043610991, guid: af5a322e995ef8f40a10a3182e97c20d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2403493978043610991, guid: af5a322e995ef8f40a10a3182e97c20d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2403493978043610991, guid: af5a322e995ef8f40a10a3182e97c20d, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -5338,7 +5339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5663221564766251715, guid: af5a322e995ef8f40a10a3182e97c20d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7468069367439153819, guid: af5a322e995ef8f40a10a3182e97c20d, type: 3}
       propertyPath: m_AnchorMax.x

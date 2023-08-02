@@ -3,7 +3,10 @@ using UnityEngine;
 public class PlayerTrigger : MonoBehaviour
 {
     [SerializeField] private Inventory _inventory;
-
+    [SerializeField] private CameraController _cameraController;
+    [SerializeField] private PlayerController _playerController;
+    [SerializeField] private EnemyHolder _enemyHolder;
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent<Collectable>(out Collectable collectable))
@@ -21,8 +24,8 @@ public class PlayerTrigger : MonoBehaviour
             Inventory.OnChangeFruitAmount?.Invoke();
             Destroy(other.gameObject);
         }
-
-        if (other.TryGetComponent<EnemyBase>(out EnemyBase enemyBase))
+        
+        if (other.transform.parent.TryGetComponent<EnemyBase>(out EnemyBase enemyBase))
         {
             if (enemyBase.IsEnemyTriggered)
                 return;
@@ -31,6 +34,14 @@ public class PlayerTrigger : MonoBehaviour
             Inventory.OnRemoveFruit?.Invoke(enemyBase.EnemyDamageAmount);
             Inventory.OnChangeFruitAmount?.Invoke();
             enemyBase.ExplodeOnTrigger();
+        }
+
+        if (other.CompareTag("ShootingStance"))
+        {
+            _cameraController.EnableShootingVirtualCamera();
+            _enemyHolder.EnableAllEnemies();
+            _playerController.PlayerState = PlayerController.PlayerStates.DriveAndShootEnemies;
+            _playerController.SetSideMoveLimits(0,0,0.5f);
         }
     }
 
