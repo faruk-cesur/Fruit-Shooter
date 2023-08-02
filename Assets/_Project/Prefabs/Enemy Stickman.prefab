@@ -94,12 +94,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 417a177cfebea2f408849492d4815967, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsEnemyTriggered: 0
+  IsEnemyExplode: 0
   IsEnemyKilled: 0
   _enemyParticle: {fileID: 6614357795964549000}
   _enemyAnimator: {fileID: 8484902806908783469}
   EnemyHealth: {fileID: 6293233702042327584}
-  EnemySpeed: 0
+  EnemySpeedRatio: 33
   EnemyDamageAmount: 30
   _skinnedMeshRenderer: {fileID: 3530110110572837928}
   _findClosestTarget: {fileID: 3314354762532426910}

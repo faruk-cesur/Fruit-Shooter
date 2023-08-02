@@ -13,6 +13,7 @@ public class Health : MonoBehaviour
     [field: SerializeField] private Gradient GradientHealthColor { get; set; }
     [field: SerializeField] private Image Fill { get; set; }
     public UnityAction OnDeath;
+    public UnityAction OnChangeHealth;
 
     public bool IsDead { get; set; }
     private float _currentHealth;
@@ -27,6 +28,7 @@ public class Health : MonoBehaviour
                 return;
 
             _currentHealth = value;
+            OnChangeHealth?.Invoke();
             SetHealthSliderValue();
 
             if (IsHealthLowerThanZero())
