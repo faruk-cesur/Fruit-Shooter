@@ -127,5 +127,11 @@ public class PlayerController : MonoBehaviour
         _sideMovementRightLimit.DOLocalMoveX(rightSideLimit, duration);
     }
 
+    public void ResetSideMovementRootPosition()
+    {
+        _sideMovementRoot.ResetLocalPos();
+        _sideMovementRoot.ResetLocalRot();
+    }
+
     #endregion
 }

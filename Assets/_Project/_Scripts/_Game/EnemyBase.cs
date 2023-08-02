@@ -43,6 +43,7 @@ public abstract class EnemyBase : MonoBehaviour
         IsEnemyKilled = true;
         EnemySpeed = 0;
         _enemyAnimator.SetTrigger(Death);
+        EnemyHolder.OnKillFromOverweight?.Invoke();
     }
 
     private void PlayEnemyParticle()

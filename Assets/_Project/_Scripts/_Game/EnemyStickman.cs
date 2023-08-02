@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using DG.Tweening;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -23,7 +24,28 @@ public class EnemyStickman : EnemyBase
 
     private void Update()
     {
-        ChaseTheTarget();
+        switch (GameManager.Instance.CurrentGameState)
+        {
+            case GameState.None:
+                break;
+            case GameState.Start:
+                break;
+            case GameState.Gameplay:
+                ChaseTheTarget();
+                break;
+            case GameState.Win:
+                break;
+            case GameState.Lose:
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            GainWeight(10);
+            transform.DOLocalMoveZ(transform.localPosition.z - 1, 0.25f);
+            transform.DOShakeScale(0.25f,0.4f);
+        }
     }
 
     private void ChaseTheTarget()

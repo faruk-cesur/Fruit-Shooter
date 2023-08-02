@@ -27,12 +27,17 @@ public class Inventory : MonoBehaviour
         OnRemoveFruit += RemoveFruit;
         OnChangeFruitAmount += ChangeFruitCaseAmount;
         GameManager.Instance.OnGameLose += DisableFruitBackground;
+        GameManager.Instance.OnGameWin += DisableFruitBackground;
         ChangeFruitCaseAmount();
     }
 
     private void OnDestroy()
     {
+        OnAddFruit -= AddFruit;
+        OnRemoveFruit -= RemoveFruit;
+        OnChangeFruitAmount -= ChangeFruitCaseAmount;
         GameManager.Instance.OnGameLose -= DisableFruitBackground;
+        GameManager.Instance.OnGameWin -= DisableFruitBackground;
     }
 
     public void AddFruit(int amount)

@@ -42,6 +42,7 @@ public class PlayerTrigger : MonoBehaviour
             _enemyHolder.EnableAllEnemies();
             _playerController.PlayerState = PlayerController.PlayerStates.DriveAndShootEnemies;
             _playerController.SetSideMoveLimits(0,0,0.5f);
+            _playerController.ResetSideMovementRootPosition();
             _inventory.SetFruitBackgroundShootingStance();
         }
     }
