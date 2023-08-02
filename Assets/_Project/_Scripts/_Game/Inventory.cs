@@ -26,7 +26,13 @@ public class Inventory : MonoBehaviour
         OnAddFruit += AddFruit;
         OnRemoveFruit += RemoveFruit;
         OnChangeFruitAmount += ChangeFruitCaseAmount;
+        GameManager.Instance.OnGameLose += DisableFruitBackground;
         ChangeFruitCaseAmount();
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.Instance.OnGameLose -= DisableFruitBackground;
     }
 
     public void AddFruit(int amount)
@@ -38,9 +44,10 @@ public class Inventory : MonoBehaviour
     {
         _fruitAmount -= amount;
 
-        if (_fruitAmount < 0)
+        if (_fruitAmount <= 0)
         {
             _fruitAmount = 0;
+            GameManager.Instance.Lose(0);
         }
     }
 
@@ -89,5 +96,10 @@ public class Inventory : MonoBehaviour
     {
         _fruitBackground.transform.DOLocalMove(new Vector3(1.25f, 5, -1), 1f);
         _fruitBackground.transform.DOScale(0.5f, 1f);
+    }
+
+    private void DisableFruitBackground()
+    {
+        _fruitBackground.gameObject.SetActive(false);
     }
 }

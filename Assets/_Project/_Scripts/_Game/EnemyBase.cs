@@ -19,11 +19,13 @@ public abstract class EnemyBase : MonoBehaviour
     protected virtual void Start()
     {
         EnemyHealth.OnDeath += KillFromOverweight;
+        GameManager.Instance.OnGameLose += ExplodeOnTrigger;
     }
 
     protected virtual void OnDestroy()
     {
         EnemyHealth.OnDeath -= KillFromOverweight;
+        GameManager.Instance.OnGameLose -= ExplodeOnTrigger;
     }
 
     public void ExplodeOnTrigger()
