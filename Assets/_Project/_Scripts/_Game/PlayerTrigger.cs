@@ -27,12 +27,12 @@ public class PlayerTrigger : MonoBehaviour
         
         if (other.transform.parent.TryGetComponent<EnemyBase>(out EnemyBase enemyBase))
         {
-            if (enemyBase.IsEnemyTriggered)
+            if (enemyBase.IsEnemyExplode)
                 return;
-
-            enemyBase.IsEnemyTriggered = true;
+            
             Inventory.OnRemoveFruit?.Invoke(enemyBase.EnemyDamageAmount);
             Inventory.OnChangeFruitAmount?.Invoke();
+            _enemyHolder.RemoveEnemyFromList(enemyBase);
             enemyBase.ExplodeOnTrigger();
         }
 
@@ -42,6 +42,7 @@ public class PlayerTrigger : MonoBehaviour
             _enemyHolder.EnableAllEnemies();
             _playerController.PlayerState = PlayerController.PlayerStates.DriveAndShootEnemies;
             _playerController.SetSideMoveLimits(0,0,0.5f);
+            _inventory.SetFruitBackgroundShootingStance();
         }
     }
 

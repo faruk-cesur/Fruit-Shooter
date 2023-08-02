@@ -7,7 +7,7 @@ using UnityEngine;
 [RequireComponent(typeof(Health))]
 public abstract class EnemyBase : MonoBehaviour
 {
-    [BoxGroup("Enemy Base"), HideInInspector] public bool IsEnemyTriggered;
+    [BoxGroup("Enemy Base"), HideInInspector] public bool IsEnemyExplode;
     [BoxGroup("Enemy Base"), HideInInspector] public bool IsEnemyKilled;
     [BoxGroup("Enemy Base"), SerializeField] private ParticleSystem _enemyParticle;
     [BoxGroup("Enemy Base"), SerializeField] private Animator _enemyAnimator;
@@ -28,15 +28,16 @@ public abstract class EnemyBase : MonoBehaviour
 
     public void ExplodeOnTrigger()
     {
+        IsEnemyExplode = true;
         PlayEnemyParticle();
         Destroy(gameObject);
     }
 
     private void KillFromOverweight()
     {
+        IsEnemyKilled = true;
         EnemySpeed = 0;
         _enemyAnimator.SetTrigger(Death);
-        IsEnemyKilled = true;
     }
 
     private void PlayEnemyParticle()

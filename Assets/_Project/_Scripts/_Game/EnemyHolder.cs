@@ -27,4 +27,18 @@ public class EnemyHolder : MonoBehaviour
             enemy.gameObject.SetActive(true);
         }
     }
+
+    public void RemoveEnemyFromList(EnemyBase enemy)
+    {
+        _enemyList.Remove(enemy);
+        if (CheckIfEnemyListEmpty())
+        {
+            GameManager.Instance.Lose(0);
+        }
+    }
+
+    private bool CheckIfEnemyListEmpty()
+    {
+        return _enemyList.Count == 0;
+    }
 }
