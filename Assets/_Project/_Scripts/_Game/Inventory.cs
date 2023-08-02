@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
@@ -18,6 +19,7 @@ public class Inventory : MonoBehaviour
     [SerializeField, BoxGroup("Inventory Settings")] private float _fruitCaseRatio = 10f;
     [SerializeField, BoxGroup("Inventory Setup")] private List<GameObject> _fruitCaseList;
     [SerializeField, BoxGroup("Inventory Setup")] private TextMeshProUGUI _fruitAmountText;
+    [SerializeField, BoxGroup("Inventory Setup")] private Transform _fruitBackground;
 
     private void Start()
     {
@@ -81,5 +83,11 @@ public class Inventory : MonoBehaviour
     private void SetFruitAmountText()
     {
         _fruitAmountText.text = _fruitAmount.ToString();
+    }
+
+    public void SetFruitBackgroundShootingStance()
+    {
+        _fruitBackground.transform.DOLocalMove(new Vector3(1.25f, 5, -1), 1f);
+        _fruitBackground.transform.DOScale(0.5f, 1f);
     }
 }
