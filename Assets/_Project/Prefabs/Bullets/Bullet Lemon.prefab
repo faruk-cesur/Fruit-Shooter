@@ -49,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bulletSpeed: 10
   _playerData: {fileID: 11400000, guid: bbdcb9a8c9473a1408962a39e0718817, type: 2}
+  _bulletRigidbody: {fileID: 5132518748712564208}
 --- !u!136 &1208431851280933138
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -49,7 +49,7 @@ public class ObjectPool : Singleton<ObjectPool>
     {
         for (int i = 0; i < amount; i++)
         {
-            GameObject obj = Instantiate(Pools[objectType].ObjectPrefab);
+            GameObject obj = Instantiate(Pools[objectType].ObjectPrefab,transform);
             obj.SetActive(false);
             Pools[objectType].PooledObject.Enqueue(obj);
         }

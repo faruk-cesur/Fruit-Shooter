@@ -7,7 +7,17 @@ public class FruitBullet : MonoBehaviour
 {
     [SerializeField] private float _bulletSpeed;
     [SerializeField] private PlayerData _playerData;
+    [SerializeField] private Rigidbody _bulletRigidbody;
 
+    private void OnEnable()
+    {
+        _bulletRigidbody.isKinematic = false;
+    }
+
+    private void OnDisable()
+    {
+        _bulletRigidbody.isKinematic = true;
+    }
 
     private void Update()
     {

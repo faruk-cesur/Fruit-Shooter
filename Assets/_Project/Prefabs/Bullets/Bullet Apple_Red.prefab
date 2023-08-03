@@ -33,7 +33,7 @@ Transform:
   m_Children:
   - {fileID: 6258654671814997249}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1794704136500780553
 MonoBehaviour:
@@ -49,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bulletSpeed: 10
   _playerData: {fileID: 11400000, guid: bbdcb9a8c9473a1408962a39e0718817, type: 2}
+  _bulletRigidbody: {fileID: 2018061577519264468}
 --- !u!136 &4821106856551715412
 CapsuleCollider:
   m_ObjectHideFlags: 0
