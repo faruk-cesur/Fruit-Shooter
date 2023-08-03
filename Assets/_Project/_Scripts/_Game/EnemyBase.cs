@@ -44,6 +44,7 @@ public abstract class EnemyBase : MonoBehaviour
         EnemySpeed = 0;
         _enemyAnimator.SetTrigger(Death);
         EnemyHolder.OnKillFromOverweight?.Invoke();
+        CurrencyManager.Instance.EarnMoney(10);
     }
 
     private void PlayEnemyParticle()
