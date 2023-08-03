@@ -2,11 +2,8 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectPool : MonoBehaviour
+public class ObjectPool : Singleton<ObjectPool>
 {
-    private static ObjectPool _instance;
-    public static ObjectPool Instance => _instance ??= FindObjectOfType<ObjectPool>();
-
     [Serializable]
     public struct Pool
     {
@@ -19,29 +16,15 @@ public class ObjectPool : MonoBehaviour
 
     private void Awake()
     {
-        MakeSingleton();
-
         for (int i = 0; i < Pools.Length; i++)
         {
             Pools[i].PooledObject = new Queue<GameObject>();
             for (int j = 0; j < Pools[i].PoolSize; j++)
             {
-                GameObject obj = Instantiate(Pools[i].ObjectPrefab);
+                GameObject obj = Instantiate(Pools[i].ObjectPrefab,transform);
                 obj.SetActive(false);
                 Pools[i].PooledObject.Enqueue(obj);
             }
-        }
-    }
-
-    private void MakeSingleton()
-    {
-        if (_instance == null)
-        {
-            _instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
         }
     }
 
