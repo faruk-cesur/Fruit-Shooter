@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     private float LeftLimitX => _sideMovementLeftLimit.localPosition.x;
     private float RightLimitX => _sideMovementRightLimit.localPosition.x;
     private float _sideMovementTarget = 0f;
-    public float ForwardMoveSpeed => _defaultForwardMovementSpeed * _playerData.BonusForwardMovementSpeed;
+    public float ForwardMoveSpeed => _defaultForwardMovementSpeed * _playerData.ForwardMovementSpeedBonus;
 
     #endregion
 
@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
 
     private void HandleForwardMovement()
     {
-        transform.Translate(Vector3.forward * (Time.deltaTime * _defaultForwardMovementSpeed * _playerData.BonusForwardMovementSpeed), Space.Self);
+        transform.Translate(Vector3.forward * (Time.deltaTime * _defaultForwardMovementSpeed * _playerData.ForwardMovementSpeedBonus), Space.Self);
     }
 
     private void HandleSideMovement()
@@ -96,7 +96,7 @@ public class PlayerController : MonoBehaviour
 
         var localPos = _sideMovementRoot.localPosition;
 
-        localPos.x = Mathf.Lerp(localPos.x, _sideMovementTarget, Time.deltaTime * _defaultSideMovementSpeed * _playerData.BonusSideMovementSpeed);
+        localPos.x = Mathf.Lerp(localPos.x, _sideMovementTarget, Time.deltaTime * _defaultSideMovementSpeed * _playerData.SideMovementSpeedBonus);
 
         _sideMovementRoot.localPosition = localPos;
     }

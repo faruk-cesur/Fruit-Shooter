@@ -33,7 +33,7 @@ public class FruitBullet : MonoBehaviour
     {
         if (other.transform.parent.TryGetComponent<EnemyStickman>(out EnemyStickman enemyBase))
         {
-            enemyBase.GainWeight(_playerData.FruitBulletDamage);
+            enemyBase.GainWeight(_playerData.BulletDamage);
         }
     }
 }
