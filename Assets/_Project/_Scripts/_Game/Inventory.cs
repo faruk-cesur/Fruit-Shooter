@@ -11,17 +11,14 @@ public class Inventory : MonoBehaviour
 {
     public static UnityAction<int> OnAddFruit;
     public static UnityAction<int> OnRemoveFruit;
-
     public static UnityAction OnChangeFruitAmount;
-    //public Transform GetActiveLastFruitCase => _activeLastFruitCase;
 
     [SerializeField, ReadOnly, BoxGroup("Inventory Debug")] private int _fruitAmount;
-
-    //[SerializeField, ReadOnly, BoxGroup("Inventory Debug")] private Transform _activeLastFruitCase;
     [SerializeField, BoxGroup("Inventory Settings")] private float _fruitCaseRatio = 10f;
     [SerializeField, BoxGroup("Inventory Setup")] private List<GameObject> _fruitCaseList;
     [SerializeField, BoxGroup("Inventory Setup")] private TextMeshProUGUI _fruitAmountText;
     [SerializeField, BoxGroup("Inventory Setup")] private Transform _fruitBackground;
+    [SerializeField, BoxGroup("Inventory Setup")] private PlayerData _playerData;
     [SerializeField, BoxGroup("Inventory Setup")] public Transform CollectableTargetPosition;
 
     private void Start()
@@ -45,7 +42,7 @@ public class Inventory : MonoBehaviour
 
     public void AddFruit(int amount)
     {
-        _fruitAmount += amount;
+        _fruitAmount = amount * _playerData.CollectedFruitBonus;
     }
 
     public void RemoveFruit(int amount)
@@ -74,26 +71,7 @@ public class Inventory : MonoBehaviour
         }
 
         SetFruitAmountText();
-        //SetActiveLastFruitCase(activeFruitCount);
     }
-
-    // private void SetActiveLastFruitCase(int activeFruitCount)
-    // {
-    //     if (activeFruitCount <= 0)
-    //     {
-    //         _activeLastFruitCase = _fruitCaseList[0].transform; // Define First Index of Fruit Case to move collectables to the first case's transform.position 
-    //         return;
-    //     }
-    //
-    //     if (activeFruitCount >= _fruitCaseList.Count)
-    //     {
-    //         _activeLastFruitCase = _fruitCaseList[^1].transform;
-    //     }
-    //     else
-    //     {
-    //         _activeLastFruitCase = _fruitCaseList[activeFruitCount - 1].transform;
-    //     }
-    // }
 
     private void SetFruitAmountText()
     {

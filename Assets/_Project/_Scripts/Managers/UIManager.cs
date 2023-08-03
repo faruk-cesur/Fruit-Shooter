@@ -75,7 +75,7 @@ public class UIManager : Singleton<UIManager>
         menu.SetActive(trueOrFalse);
     }
 
-    private void FadeCanvasGroup(CanvasGroup canvasGroup, float duration, bool enableUI)
+    public void FadeCanvasGroup(CanvasGroup canvasGroup, float duration, bool enableUI)
     {
         if (enableUI)
         {

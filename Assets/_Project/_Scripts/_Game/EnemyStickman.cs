@@ -83,7 +83,7 @@ public class EnemyStickman : EnemyBase
     {
         while (true)
         {
-            EnemyHealth.Heal(1);
+            EnemyHealth.Heal(SettingsManager.Instance.EnemyDifficultySlider.value);
             SetBlendShapeWeight();
             yield return new WaitForSeconds(0.1f);
         }

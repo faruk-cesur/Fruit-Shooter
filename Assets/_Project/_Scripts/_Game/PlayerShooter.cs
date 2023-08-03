@@ -89,7 +89,7 @@ public class PlayerShooter : MonoBehaviour
 
     private void ResetDurationBetweenBullets()
     {
-        _durationBetweenBullets = _playerData.DurationBetweenBullets;
+        _durationBetweenBullets = _playerData.BulletReloadDuration;
     }
 
     private void BlendshapeGunHead()
