@@ -40,12 +40,6 @@ public class EnemyStickman : EnemyBase
             default:
                 throw new ArgumentOutOfRangeException();
         }
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            GainWeight(10);
-            transform.DOLocalMoveZ(transform.localPosition.z - 1, 0.25f);
-            transform.DOShakeScale(0.25f,0.4f);
-        }
     }
 
     private void ChaseTheTarget()
@@ -99,5 +93,7 @@ public class EnemyStickman : EnemyBase
     {
         EnemyHealth.Damage(damage);
         SetBlendShapeWeight();
+        transform.DOLocalMoveZ(transform.localPosition.z - 1, 0.25f);
+        transform.DOShakeScale(0.25f,0.4f);
     }
 }
