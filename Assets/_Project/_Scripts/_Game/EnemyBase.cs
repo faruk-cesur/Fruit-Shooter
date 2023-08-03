@@ -43,6 +43,7 @@ public abstract class EnemyBase : MonoBehaviour
         IsEnemyKilled = true;
         EnemySpeed = 0;
         _enemyAnimator.SetTrigger(Death);
+        transform.SetParent(null);
         EnemyHolder.OnKillFromOverweight?.Invoke();
         CurrencyManager.Instance.EarnMoney(10);
     }
@@ -61,11 +62,11 @@ public abstract class EnemyBase : MonoBehaviour
 
     private void SetEnemySpeed()
     {
-        if (EnemyHealth.CurrentHealth > 60)
+        if (EnemyHealth.CurrentHealth > 50)
         {
             EnemySpeed = EnemyHealth.CurrentHealth / EnemySpeedRatio;
         }
-        else if (EnemyHealth.CurrentHealth < 60 && EnemyHealth.CurrentHealth >= 30)
+        else if (EnemyHealth.CurrentHealth < 50 && EnemyHealth.CurrentHealth >= 30)
         {
             EnemySpeed = 0;
         }

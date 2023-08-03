@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ForwardMovementSpeedBonus>k__BackingField: 10
   <SideMovementSpeedBonus>k__BackingField: 10
-  <BulletDamage>k__BackingField: 10
-  <DurationBetweenBullets>k__BackingField: 0.25
+  <BulletDamage>k__BackingField: 25
+  <DurationBetweenBullets>k__BackingField: 0.2

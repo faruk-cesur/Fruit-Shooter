@@ -64,6 +64,15 @@ public class PlayerShooter : MonoBehaviour
                     _gunAimY += touch.deltaPosition.y * _gunAimSensitivity;
                     StartCoroutine(SpawnBulletFromObjectPool());
                     break;
+                case TouchPhase.Stationary:
+                    StartCoroutine(SpawnBulletFromObjectPool());
+                    break;
+                case TouchPhase.Ended:
+                    break;
+                case TouchPhase.Canceled:
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
             }
         }
 

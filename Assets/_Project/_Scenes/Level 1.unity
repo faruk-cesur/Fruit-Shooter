@@ -788,7 +788,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 4, z: 4.5}
+  m_FollowOffset: {x: 0, y: 4, z: 4}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -1879,7 +1879,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 250003278750762248, guid: caaaf571ef255e24f810db4fad4acb67, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3888577001897610176, guid: caaaf571ef255e24f810db4fad4acb67, type: 3}
       propertyPath: m_Name
