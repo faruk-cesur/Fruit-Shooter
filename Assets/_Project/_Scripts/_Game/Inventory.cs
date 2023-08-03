@@ -42,7 +42,7 @@ public class Inventory : MonoBehaviour
 
     public void AddFruit(int amount)
     {
-        _fruitAmount = amount * _playerData.CollectedFruitBonus;
+        _fruitAmount += (amount * _playerData.CollectedFruitBonus);
     }
 
     public void RemoveFruit(int amount)

@@ -1912,6 +1912,7 @@ MonoBehaviour:
   - {fileID: 2352049101479088125}
   _fruitAmountText: {fileID: 5490860739455571007}
   _fruitBackground: {fileID: 1500688018696613165}
+  _playerData: {fileID: 11400000, guid: bbdcb9a8c9473a1408962a39e0718817, type: 2}
   CollectableTargetPosition: {fileID: 286181652708257398}
 --- !u!1 &6063924128424192240
 GameObject:

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b8a5b2262bd4abcbfb21d6d0c5513bb, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  <ForwardMovementSpeedBonus>k__BackingField: 10
+  <ForwardMovementSpeedBonus>k__BackingField: 20
   <SideMovementSpeedBonus>k__BackingField: 10
-  <BulletDamage>k__BackingField: 25
-  <DurationBetweenBullets>k__BackingField: 0.2
+  <BulletDamage>k__BackingField: 20
+  <BulletReloadDuration>k__BackingField: 0
+  <CollectedFruitBonus>k__BackingField: 1
