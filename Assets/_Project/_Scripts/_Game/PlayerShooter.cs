@@ -7,6 +7,7 @@ public class PlayerShooter : MonoBehaviour
     [SerializeField] private Transform _aimGunHead;
     [SerializeField] private Transform _fruitBulletSpawnPosition;
     [SerializeField] private List<GameObject> _fruitBulletsPrefabList;
+    [SerializeField] private List<GameObject> _spawnedFruitBulletList;
 
     private GameObject GetRandomFruitBullet()
     {
@@ -17,6 +18,7 @@ public class PlayerShooter : MonoBehaviour
     private void SpawnFruitBullet()
     {
         var spawnedFruitBullet = Instantiate(GetRandomFruitBullet(), _fruitBulletSpawnPosition);
-        // todo spawnlanan bulleti rakibe hareket ettir
+        
+        _spawnedFruitBulletList.Add(spawnedFruitBullet);
     }
 }
