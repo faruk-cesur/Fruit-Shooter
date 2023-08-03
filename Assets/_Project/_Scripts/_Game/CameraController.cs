@@ -13,7 +13,7 @@ public class CameraController : MonoBehaviour
         _drivingVirtualCamera.gameObject.SetActive(true);
         _shootingVirtualCamera.gameObject.SetActive(false);
     }
-    
+
     public void EnableShootingVirtualCamera()
     {
         _shootingVirtualCamera.gameObject.SetActive(true);

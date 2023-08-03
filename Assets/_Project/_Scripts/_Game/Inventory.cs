@@ -11,10 +11,12 @@ public class Inventory : MonoBehaviour
 {
     public static UnityAction<int> OnAddFruit;
     public static UnityAction<int> OnRemoveFruit;
+
     public static UnityAction OnChangeFruitAmount;
     //public Transform GetActiveLastFruitCase => _activeLastFruitCase;
 
     [SerializeField, ReadOnly, BoxGroup("Inventory Debug")] private int _fruitAmount;
+
     //[SerializeField, ReadOnly, BoxGroup("Inventory Debug")] private Transform _activeLastFruitCase;
     [SerializeField, BoxGroup("Inventory Settings")] private float _fruitCaseRatio = 10f;
     [SerializeField, BoxGroup("Inventory Setup")] private List<GameObject> _fruitCaseList;

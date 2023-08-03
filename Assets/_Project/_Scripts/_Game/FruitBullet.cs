@@ -26,7 +26,7 @@ public class FruitBullet : MonoBehaviour
 
     private void MoveBulletForward()
     {
-        transform.Translate(Vector3.forward * (_bulletSpeed * Time.deltaTime),Space.Self);
+        transform.Translate(Vector3.forward * (_bulletSpeed * Time.deltaTime), Space.Self);
     }
 
     private void OnTriggerEnter(Collider other)

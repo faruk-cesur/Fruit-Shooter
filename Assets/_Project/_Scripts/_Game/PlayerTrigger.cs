@@ -6,7 +6,8 @@ public class PlayerTrigger : MonoBehaviour
     [SerializeField] private CameraController _cameraController;
     [SerializeField] private PlayerController _playerController;
     [SerializeField] private EnemyHolder _enemyHolder;
-    
+    [SerializeField] private GameObject _disableCable;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.parent.TryGetComponent<Collectable>(out Collectable collectable))
@@ -24,12 +25,12 @@ public class PlayerTrigger : MonoBehaviour
             Inventory.OnChangeFruitAmount?.Invoke();
             Destroy(other.gameObject);
         }
-        
+
         if (other.transform.parent.TryGetComponent<EnemyBase>(out EnemyBase enemyBase))
         {
             if (enemyBase.IsEnemyExplode)
                 return;
-            
+
             Inventory.OnRemoveFruit?.Invoke(enemyBase.EnemyDamageAmount);
             Inventory.OnChangeFruitAmount?.Invoke();
             _enemyHolder.RemoveEnemyFromList(enemyBase);
@@ -41,9 +42,10 @@ public class PlayerTrigger : MonoBehaviour
             _cameraController.EnableShootingVirtualCamera();
             _enemyHolder.EnableAllEnemies();
             _playerController.PlayerState = PlayerController.PlayerStates.DriveAndShootEnemies;
-            _playerController.SetSideMoveLimits(0,0,0.5f);
+            _playerController.SetSideMoveLimits(0, 0, 0.5f);
             _playerController.ResetSideMovementRootPosition();
             _inventory.SetFruitBackgroundShootingStance();
+            _disableCable.SetActive(false);
         }
     }
 

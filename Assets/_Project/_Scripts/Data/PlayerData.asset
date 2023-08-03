@@ -15,4 +15,4 @@ MonoBehaviour:
   <ForwardMovementSpeedBonus>k__BackingField: 10
   <SideMovementSpeedBonus>k__BackingField: 10
   <BulletDamage>k__BackingField: 10
-  <BulletReloadTime>k__BackingField: 0
+  <DurationBetweenBullets>k__BackingField: 0.25

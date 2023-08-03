@@ -48,7 +48,7 @@ public class EnemyHolder : MonoBehaviour
             GameManager.Instance.Lose(0);
         }
     }
-    
+
     private void SetEnemySpeedRatio()
     {
         foreach (var enemy in _enemyList)
@@ -69,7 +69,7 @@ public class EnemyHolder : MonoBehaviour
     {
         return _enemyList.Count == 0;
     }
-    
+
     private bool CheckIfEnemyListKilledFromOverweight()
     {
         foreach (var enemy in _enemyList)

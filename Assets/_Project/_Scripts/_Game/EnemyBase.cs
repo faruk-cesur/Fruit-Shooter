@@ -58,7 +58,7 @@ public abstract class EnemyBase : MonoBehaviour
     {
         _enemyParticle.transform.SetParent(null);
     }
-    
+
     private void SetEnemySpeed()
     {
         if (EnemyHealth.CurrentHealth > 60)
