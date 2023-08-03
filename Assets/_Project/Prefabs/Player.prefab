@@ -162,12 +162,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 250966599624616932}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.8, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2045847888273487600}
+  m_Children:
+  - {fileID: 3080753156930245404}
+  m_Father: {fileID: 6924221333939729518}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1670729342771424330
@@ -200,7 +201,6 @@ Transform:
   m_Children:
   - {fileID: 662389086097133385}
   - {fileID: 6924221333939729518}
-  - {fileID: 5426421165655134902}
   m_Father: {fileID: 8247595669075541662}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -650,6 +650,7 @@ MonoBehaviour:
   _fruitBulletSpawnPosition: {fileID: 5426421165655134902}
   _fruitBulletsPrefabList:
   - {fileID: 3736338252796282495, guid: 0cc977ead9b8deb4a9563a3a2df6046b, type: 3}
+  _spawnedFruitBulletList: []
 --- !u!54 &3821949496584884790
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1092,6 +1093,7 @@ Transform:
   m_Children:
   - {fileID: 5990524668107951862}
   - {fileID: 8565472219309487547}
+  - {fileID: 5426421165655134902}
   m_Father: {fileID: 2045847888273487600}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1178,6 +1180,61 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &5539507867945455891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3080753156930245404}
+  - component: {fileID: 4542943345840310850}
+  m_Layer: 0
+  m_Name: Fruit Bullet Object Pool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3080753156930245404
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5539507867945455891}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5426421165655134902}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4542943345840310850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5539507867945455891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36555d426b2e2d4429e67827ed8c59a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pools:
+  - ObjectPrefab: {fileID: 6968223909028268651, guid: 5b6c1b28044956b46849fc5e115fa498, type: 3}
+    PoolSize: 5
+  - ObjectPrefab: {fileID: 143501370764383799, guid: 2ce5802ac50c9584d8df2ccb46d85c35, type: 3}
+    PoolSize: 5
+  - ObjectPrefab: {fileID: 8552411466795073395, guid: c73154cd509ba1a47bd76547fc198760, type: 3}
+    PoolSize: 5
+  - ObjectPrefab: {fileID: 205982305546337635, guid: 84bcc0711569c75489a61ebfe594d555, type: 3}
+    PoolSize: 5
+  - ObjectPrefab: {fileID: 3562692779769168294, guid: 816a6d8780da6b54498da0856f9728dc, type: 3}
+    PoolSize: 5
 --- !u!1 &5846432017641460399
 GameObject:
   m_ObjectHideFlags: 0
@@ -1841,7 +1898,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 98663b0033e5347c1a470a40f89f1f10, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 14294600cd11396429175362ea3f53f7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
