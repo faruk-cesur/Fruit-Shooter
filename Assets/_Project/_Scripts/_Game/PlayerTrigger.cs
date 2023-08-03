@@ -9,9 +9,9 @@ public class PlayerTrigger : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent<Collectable>(out Collectable collectable))
+        if (other.transform.parent.TryGetComponent<Collectable>(out Collectable collectable))
         {
-            collectable.Collect(_inventory.GetActiveLastFruitCase);
+            collectable.Collect(_inventory.CollectableTargetPosition);
         }
 
         if (other.TryGetComponent<FruitGate>(out FruitGate fruitGate))

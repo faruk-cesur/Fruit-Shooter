@@ -649,7 +649,11 @@ MonoBehaviour:
   _aimGunHead: {fileID: 6924221333939729518}
   _fruitBulletSpawnPosition: {fileID: 5426421165655134902}
   _fruitBulletsPrefabList:
-  - {fileID: 3736338252796282495, guid: 0cc977ead9b8deb4a9563a3a2df6046b, type: 3}
+  - {fileID: 6968223909028268651, guid: 5b6c1b28044956b46849fc5e115fa498, type: 3}
+  - {fileID: 143501370764383799, guid: 2ce5802ac50c9584d8df2ccb46d85c35, type: 3}
+  - {fileID: 8552411466795073395, guid: c73154cd509ba1a47bd76547fc198760, type: 3}
+  - {fileID: 205982305546337635, guid: 84bcc0711569c75489a61ebfe594d555, type: 3}
+  - {fileID: 3562692779769168294, guid: 816a6d8780da6b54498da0856f9728dc, type: 3}
   _spawnedFruitBulletList: []
 --- !u!54 &3821949496584884790
 Rigidbody:
@@ -1265,6 +1269,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3327044800561237457}
+  - {fileID: 286181652708257398}
   m_Father: {fileID: 8247595669075541662}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1281,7 +1286,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fruitAmount: 0
-  _activeLastFruitCase: {fileID: 0}
   _fruitCaseRatio: 10
   _fruitCaseList:
   - {fileID: 3469869403428886894}
@@ -1331,6 +1335,7 @@ MonoBehaviour:
   - {fileID: 6132198533754540650}
   _fruitAmountText: {fileID: 5490860739455571007}
   _fruitBackground: {fileID: 1500688018696613165}
+  CollectableTargetPosition: {fileID: 286181652708257398}
 --- !u!1 &6063924128424192240
 GameObject:
   m_ObjectHideFlags: 0
@@ -1859,15 +1864,15 @@ RectTransform:
   m_GameObject: {fileID: 6998742011896846624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1500688018696613165}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.35, y: 0.7}
+  m_AnchoredPosition: {x: -0.5, y: 0.5}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1899993887602280429
@@ -1898,7 +1903,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 14294600cd11396429175362ea3f53f7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4abe21956c8db0045b1f6f5b4c36d822, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2151,6 +2156,37 @@ Transform:
   - {fileID: 6543885370058546609}
   m_Father: {fileID: 8247595669075541662}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7795269449755296587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 286181652708257398}
+  m_Layer: 0
+  m_Name: Collectable Target Position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &286181652708257398
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7795269449755296587}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5132844072897777696}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7867231476168946251
 GameObject:

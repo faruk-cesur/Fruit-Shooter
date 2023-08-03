@@ -26,6 +26,7 @@ public class Collectable : MonoBehaviour
         {
             case CollectableTypes.Money:
                 CurrencyManager.Instance.EarnMoney(_collectableAmount);
+                Destroy(gameObject);
                 break;
             case CollectableTypes.Fruit:
                 CollectAnimation(targetTransformForAnimation);
