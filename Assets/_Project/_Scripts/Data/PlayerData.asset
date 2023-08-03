@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   <ForwardMovementSpeedBonus>k__BackingField: 20
-  <SideMovementSpeedBonus>k__BackingField: 10
+  <SideMovementSpeedBonus>k__BackingField: 40
   <BulletDamage>k__BackingField: 20
-  <BulletReloadDuration>k__BackingField: 0
+  <BulletReloadDuration>k__BackingField: 0.5
   <CollectedFruitBonus>k__BackingField: 1

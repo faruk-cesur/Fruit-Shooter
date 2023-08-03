@@ -80,7 +80,7 @@ public class Inventory : MonoBehaviour
 
     public void SetFruitBackgroundShootingStance()
     {
-        _fruitBackground.transform.DOLocalMove(new Vector3(1.25f, 5, -1), 1f);
+        _fruitBackground.transform.DOLocalMove(new Vector3(0.75f, 4.75f, -1), 1f);
         _fruitBackground.transform.DOScale(0.5f, 1f);
     }
 
